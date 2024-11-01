@@ -1,5 +1,9 @@
 import WalConnect from "../component/WalConnect";
 import QueryAirdrop from "@/component/QueryAirdrop";
+import DepositETH from "@/component/DepositETH";
+import WithdrawETH from "@/component/WithdrawETH";
+import GrantRewards from "@/component/GrantRewards";
+import TokenWhiteList from "@/component/TokenWhiteList";
 
 export default function Home() {
   return (
@@ -7,6 +11,10 @@ export default function Home() {
       <main className="flex flex-col gap-8 row-start-2 items-center sm:items-start">
           <WalConnect />
           <QueryAirdrop />
+          <DepositETH />
+          <WithdrawETH />
+          <GrantRewards/>
+          <TokenWhiteList/>
       </main>
     </div>
   );
