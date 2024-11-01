@@ -153,21 +153,25 @@ const QueryAirdrop = () => {
     <div>
       <Form {...form}>
         <form className="space-y-8">
-          <FormField
-            control={form.control}
-            name="username"
-            render={({ field }) => (
-              <FormItem>
-                <FormLabel>1 空投代币数量查询</FormLabel>
-                <FormControl>
-                  <Input placeholder="0xaddress" {...field} />
-                </FormControl>
-              </FormItem>
-            )}
-          />
-          <Button type="button" onClick={() => form.handleSubmit(queryReward)()}>查询</Button>
-          <Button type="button" onClick={() => form.handleSubmit(claimAirdrop)()}>领取</Button>
-          <Button type="button" onClick={() => form.handleSubmit(claimAllTokens)()}>领取所有代币</Button>
+          <div className="mb-3">
+            <FormField
+              control={form.control}
+              name="username"
+              render={({ field }) => (
+                <FormItem>
+                  <FormLabel>1 空投代币数量查询</FormLabel>
+                  <FormControl>
+                    <Input placeholder="0xaddress" {...field} />
+                  </FormControl>
+                </FormItem>
+              )}
+            />
+          </div>
+          <div className="flex gap-4 flex-row justify-between items-center mt-8">
+            <Button type="button" onClick={() => form.handleSubmit(queryReward)()}>查询</Button>
+            <Button type="button" onClick={() => form.handleSubmit(claimAirdrop)()}>领取</Button>
+            <Button type="button" onClick={() => form.handleSubmit(claimAllTokens)()}>领取所有代币</Button>
+          </div>
         </form>
       </Form>
       {/* 展示合约返回的结果 */}
